@@ -2,6 +2,7 @@
 
 ####################################
 # Avian Data Acquisition Unit
+# Author: Nicholas Daniels
 # Last Revision: 12-12-2017
 ####################################
 
