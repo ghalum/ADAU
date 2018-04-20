@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 ####################################
-# Author: Nicholas Daniels
 # Avian Data Acquisition Unit
 # Last Revision: 12-12-2017
 ####################################
