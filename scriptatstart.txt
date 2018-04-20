@@ -1,0 +1,17 @@
+// Navigate in terminal to autostart file
+
+sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+
+// Add line to run script, save and exit
+
+@/home/pi/Desktop/autorun.sh
+
+// In the autorun.sh file, located on the Desktop write
+
+#!/bin/bash
+sleep 10
+lxterminal -e python3 /home/pi/Desktop/project/run.py
+
+// Make sure file autorun.sh is executable
+
+sudo chmod +x /home/pi/Desktop/autorun.sh

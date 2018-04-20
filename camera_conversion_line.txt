@@ -1,0 +1,10 @@
+// Play raw file
+omxplayer 3.54.46_11-23-2017.h264
+
+// Convert raw file
+MP4Box -fps 30 -add myvid.h264 myvid.mp4
+
+// Play converted file
+omxplayer -p -o hdmi myvid.mp4
+
+// For best results upload the raw file (.h264) to YouTube
