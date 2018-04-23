@@ -9,4 +9,4 @@ Sample: https://youtu.be/_M7hzzX0MmY
 
 University of Southern Indiana - Engineering Senior Design
 
-Keywords: HX711 scale load-cell loadcell raspberrypi pi
+Keywords: HX711 scale load-cell load cell raspberrypi pi
