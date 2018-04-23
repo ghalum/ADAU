@@ -16,6 +16,6 @@ camera.framerate = 30
 camera.start_preview()
 camera.annotate_foreground = Color('white')
 camera.annotate_background = Color('black')
-camera.annotate_text = " I am what I am "  
+camera.annotate_text = "Test"  
 time.sleep(120)
 camera.stop_preview()
