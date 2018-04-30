@@ -161,10 +161,9 @@ with open(csvLocation, "w", newline="") as csvfile:
 					humid = dhtReading.humidity 
 					if scaleReading > 1 :
 						c.writerow({'time': datetime.datetime.now().strftime("%H:%M:%S"), \
-									'mass': str("{0:.1f}".format(scaleReading)), \
-									'temp': str(temp), \
-									'humid': str(humid) \
-									})
+							    'mass': str("{0:.1f}".format(scaleReading)), \
+							    'temp': str(temp), \
+							    'humid': str(humid) })
 								
 					print(str("{0:.1f}".format(scaleReading)) + ' g')
 					camera.annotate_text = annotation
