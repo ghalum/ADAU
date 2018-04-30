@@ -5,8 +5,6 @@
 # Author: Nicholas Daniels
 # Last Revision: 12-12-2017
 ####################################
-
-
 from picamera import PiCamera	# Import PiCamera module
 from picamera import Color	# Import color for camera annotations
 from scale import Scale		# Import HX711 modified scale library: For some reason I never set the pin location in the main code. Set pin location here or change it.
