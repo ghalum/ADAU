@@ -123,9 +123,11 @@ with open(csvLocation, "w", newline="") as csvfile:
 	schedule.every(30).seconds.do(timedTare)
 	
 	# Enter the main running loop
-	while True:
+	while (True):
+		
 		# Points to the 30 seccond timer above. It remembers to check the time for the scheduled interrupt.
 		schedule.run_pending()
+		
 		# Unless an exception occurs, run this code
 		try:
 			# Call for a scale, temperature, and humidity reading
@@ -141,20 +143,19 @@ with open(csvLocation, "w", newline="") as csvfile:
 			annotation = datetime.datetime.now().strftime("%H:%M:%S " \
 						+ "Mass: " + str("{0:.1f}".format(scaleReading)) + "g " \
 						+ "T: " + str("{0:.1f}".format(temp)) + " F " \
-						+ "H: " + str("{0:.1f}".format(humid)) + "%%" \
-						)
+						+ "H: " + str("{0:.1f}".format(humid)) + "%%")
 						
 			camera.annotate_text = annotation
 			camera.annotate_text_size = cameraAnnoSize
 			
 			# If the scale reading is within the desired range perform the following
-			if scaleReading > -10:
+			if (scaleReading > -10):
 				
 				# The if and else statements capture the scale value and record it to the CSV file and update the camera annotation
 				# The if statement looks to see if the temperature and humidity value is valid, if it is it will record it into the CSV
 				# If the DHT reading is not valid, it exclude it from the CSV to conserve memory, but will still record a load-cell reading
 				
-				if dhtReading.is_valid():
+				if (dhtReading.is_valid()):
 					
 					temp = dhtReading.temperature
 					humid = dhtReading.humidity 
@@ -172,7 +173,7 @@ with open(csvLocation, "w", newline="") as csvfile:
 					movingList.append(scaleReading)
 					
 				else:
-					if scaleReading > 1:
+					if (scaleReading > 1):
 						c.writerow({'time': datetime.datetime.now().strftime("%H:%M:%S"), \
 									'mass': str("{0:.1f}".format(scaleReading)) \
 									})
